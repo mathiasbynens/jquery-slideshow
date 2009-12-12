@@ -4,7 +4,7 @@
  * Pluginified by Mathias Bynens – http://mathiasbynens.be/
  * …and Michael Eichelsdörfer – http://www.michael-eichelsdoerfer.de/
  */
-;(function($) { 
+;(function($) {
  $.fn.slideShow = function(settings) {
   var config = {
    'timeOut': 3000,
