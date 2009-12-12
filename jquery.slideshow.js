@@ -9,7 +9,7 @@
   // Specify default settings
   var config = {
    'timeOut': 3000,
-   'speed': 'normal'
+   'speed': 400 // 'normal'
   };
   // Use custom settings, if any
   if (settings) {
@@ -20,7 +20,7 @@
    // (instead of the slideshow container), so we store it inside a var
    var $elem = $(this);
    // Hide all slides except the first one
-   $elem.children(':gt(0)').hide(); // $elem.children().slice(1).hide(); would work as well
+   $elem.children(':gt(0)').hide(); // $elem.children().slice(1).hide(); would work as well, but is 1 byte longer
    // Iterate through the slides
    setInterval(function() {
     $elem.children().eq(0)
