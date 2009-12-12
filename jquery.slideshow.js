@@ -15,6 +15,7 @@
   if (settings) {
    $.extend(config, settings);
   };
+  // We loop through the selected elements, in case the slideshow was called on more than one element, e.g. `$('.foo, .bar').slideShow();`
   this.each(function() {
    // Inside the setInterval() block, `this` references the window object
    // (instead of the slideshow container), so we store it inside a var
