@@ -6,20 +6,33 @@
  */
 ;(function($) {
  $.fn.slideShow = function(settings) {
+  // Specify default settings
   var config = {
    'timeOut': 3000,
    'speed': 'normal'
   };
+  // Use custom settings, if any
   if (settings) {
    $.extend(config, settings);
   };
   this.each(function() {
+   // Inside the setInterval() block, `this` references the window object
+   // (instead of the slideshow container), so we store it inside a var
    var $elem = $(this);
-   $elem.children(':gt(0)').hide();
+   // Hide all slides except the first one
+   $elem.children(':gt(0)').hide(); // $elem.children().slice(1).hide(); would work as well
+   // Iterate through the slides
    setInterval(function() {
-    $elem.children().eq(0).fadeOut(config.speed).next().fadeIn(config.speed).end().appendTo($elem);
+    $elem.children().eq(0)
+     // Fade out the current slide
+     .fadeOut(config.speed)
+     // Fade in the next slide
+     .next().fadeIn(config.speed)
+    // Append the current slide to the end of the stack
+    .end().appendTo($elem);
    }, config.timeOut);
   });
+  // Allow chaining
   return this;
  };
 })(jQuery);
