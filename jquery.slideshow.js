@@ -1,14 +1,13 @@
 /*!
- * ‘Simplest jQuery Slideshow’ – http://snook.ca/archives/javascript/simplest-jquery-slideshow
- * Script by Jonathan Snook – http://snook.ca/
+ * Simplest jQuery Slideshow Plugin – http://github.com/mathiasbynens/Simplest-jQuery-Slideshow
+ * Script by Jonathan Snook – http://snook.ca/archives/javascript/simplest-jquery-slideshow
  * Pluginified by Mathias Bynens – http://mathiasbynens.be/
- * …and Michael Eichelsdörfer – http://www.michael-eichelsdoerfer.de/
  */
 ;(function($) {
  $.fn.slideShow = function(settings) {
   // Specify default settings
   var config = {
-   'timeOut': 3000,
+   'timeout': 3000,
    'speed': 400 // 'normal'
   };
   // Use custom settings, if any
@@ -30,7 +29,7 @@
      .next().fadeIn(config.speed)
     // Append the current slide to the end of the stack
     .end().appendTo($elem);
-   }, config.timeOut);
+   }, config.timeout);
   });
   // Allow chaining
   return this;
