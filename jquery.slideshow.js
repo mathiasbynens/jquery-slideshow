@@ -7,8 +7,8 @@
  $.fn.slideShow = function(settings) {
   // Specify default settings
   var config = {
-   'timeout': 3000,
-   'speed': 400 // 'normal'
+   timeout: 3000,
+   speed: 400 // 'normal'
   };
   // Use custom settings, if any
   if (settings) {
@@ -18,17 +18,14 @@
   this.each(function() {
    // Inside the setInterval() block, `this` references the window object instead of the slideshow container element, so we store it inside a var
    var $elem = $(this);
-   // Hide all slides except the first one
-   $elem.children(':gt(0)').hide(); // $elem.children().slice(1).hide(); would work as well, but is 1 byte longer
+   $elem.children().eq(0).appendTo($elem).show();
    // Iterate through the slides
    setInterval(function() {
     $elem.children().eq(0)
-     // Fade out the current slide
-     .fadeOut(config.speed)
+     // Hide the current slide and append it to the end of the image stack
+     .hide().appendTo($elem) // As of jQuery 1.3.2, .appendTo() returns the inserted element
      // Fade in the next slide
-     .next().fadeIn(config.speed)
-    // Append the current slide to the end of the stack
-    .end().appendTo($elem);
+     .fadeIn(config.speed)
    }, config.timeout);
   });
   // Allow chaining
