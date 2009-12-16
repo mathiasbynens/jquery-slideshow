@@ -1,10 +1,13 @@
 /*!
- * Simplest jQuery Slideshow Plugin – http://github.com/mathiasbynens/Simplest-jQuery-Slideshow
- * Script by Jonathan Snook – http://snook.ca/archives/javascript/simplest-jquery-slideshow
- * Pluginified by Mathias Bynens – http://mathiasbynens.be/
+ * Simplest jQuery Slideshow Plugin
+ * @link http://github.com/mathiasbynens/Simplest-jQuery-Slideshow
+ * Script by Jonathan Snook
+ * @link http://snook.ca/archives/javascript/simplest-jquery-slideshow
+ * Pluginified by Mathias Bynens
+ * @link http://mathiasbynens.be/
  */
 ;(function($) {
- $.fn.slideShow = function(settings) {
+ $.fn.slideshow = function(settings) {
   // Specify default settings
   var config = {
    timeout: 3000,
