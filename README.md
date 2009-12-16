@@ -24,7 +24,7 @@ This plugin was based on [Jonathan Snook’s Simplest jQuery Slideshow script](h
 
 If you’re using `position: absolute` to place the slides on top of each other, the first slide you’ll see is in fact the _last_ slide in the HTML. Users without JavaScript enabled will _only_ see this slide.
 
-However, as soon as .slideshow() plugin is invoked, the slideshow will start at slide 1, which is the _first_ slide in the HTML.
+However, as soon as `.slideshow()` is invoked, the slideshow will start at slide 1, which is the _first_ slide in the HTML.
 
 To prevent users from seeing the last slide before the plugin is loaded, and to prevent users without JavaScript from seeing the last slide instead of the first slide in the markup, you can use CSS.
 
