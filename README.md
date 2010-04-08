@@ -4,7 +4,7 @@ This plugin was based on [Jonathan Snook’s Simplest jQuery Slideshow script](h
 
 ## Demo & Examples
 
-[http://mathiasbynens.be/examples/slideshow](http://mathiasbynens.be/examples/slideshow)
+[http://mathiasbynens.be/demo/slideshow](http://mathiasbynens.be/demo/slideshow)
 
 ## Example Usage
 
