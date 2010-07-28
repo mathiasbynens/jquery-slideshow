@@ -20,8 +20,8 @@
      // Hide the current slide and append it to the end of the image stack
      .hide().appendTo($elem) // As of jQuery 1.3.2, .appendTo() returns the inserted element
      // Fade in the next slide
-     .fadeIn(config.speed)
-   }, config.timeout);
+     .fadeIn(options.speed)
+   }, options.timeout);
   });
   // Allow chaining
   return this;
