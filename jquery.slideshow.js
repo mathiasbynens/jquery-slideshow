@@ -4,16 +4,11 @@
  * Pluginified by Mathias Bynens – http://mathiasbynens.be/
  */
 ;(function($) {
- $.fn.slideshow = function(settings) {
-  // Specify default settings
-  var config = {
+ $.fn.slideshow = function(options) {
+  $.extend({
    timeout: 3000,
    speed: 400 // 'normal'
-  };
-  // Use custom settings, if any
-  if (settings) {
-   $.extend(config, settings);
-  };
+  }, options);
   // We loop through the selected elements, in case the slideshow was called on more than one element e.g. `$('.foo, .bar').slideShow();`
   this.each(function() {
    // Inside the setInterval() block, `this` references the window object instead of the slideshow container element, so we store it inside a var
