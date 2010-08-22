@@ -10,7 +10,7 @@
    speed: 400 // 'normal'
   }, options);
   // We loop through the selected elements, in case the slideshow was called on more than one element e.g. `$('.foo, .bar').slideShow();`
-  this.each(function() {
+  return this.each(function() {
    // Inside the setInterval() block, `this` references the window object instead of the slideshow container element, so we store it inside a var
    var $elem = $(this);
    $elem.children().eq(0).appendTo($elem).show();
@@ -23,7 +23,5 @@
      .fadeIn(options.speed)
    }, options.timeout);
   });
-  // Allow chaining
-  return this;
  };
 })(jQuery);
