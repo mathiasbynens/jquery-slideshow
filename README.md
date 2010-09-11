@@ -20,6 +20,20 @@ This plugin was based on [Jonathan Snook’s Simplest jQuery Slideshow script](h
 
     $('.slideshow, .other-slideshow').slideshow();
 
+### CSS
+
+The plugin expects all images to be hidden. If you have a conditional `js` class on the `<body>` element, you can simply use the following CSS:
+
+    .js .slideshow li { display: none; }
+
+This is the fastest and preferred solution.
+
+But if you really want to, you could do this with jQuery instead:
+
+    $('.slideshow li').hide().parent().slideshow();
+
+This functionality could easily be included in the plugin, but since it’s way better to just use CSS for this stuff I deliberately left it out.
+
 ## Avoiding flashing / flickering slides on first load
 
 If you’re using `position: absolute` to place the slides on top of each other, the first slide you’ll see is in fact the _last_ slide in the HTML. Users without JavaScript enabled will _only_ see this slide.

@@ -5,7 +5,7 @@
  */
 ;(function($) {
  $.fn.slideshow = function(options) {
-  $.extend({
+  options = $.extend({
    timeout: 3000,
    speed: 400 // 'normal'
   }, options);
