@@ -1,6 +1,6 @@
 # Simplest jQuery Slideshow Plugin
 
-This plugin was based on [Jonathan Snook’s Simplest jQuery Slideshow script](http://snook.ca/archives/javascript/simplest-jquery-slideshow). All I did was take that script, optimize it a little, and wrap it in a plugin.
+This plugin was based on [Jonathan Snook’s Simplest jQuery Slideshow script](http://snook.ca/archives/javascript/simplest-jquery-slideshow). All I did was take that script, make it generic, optimize it, and wrap it in a plugin.
 
 ## Demo & Examples
 
