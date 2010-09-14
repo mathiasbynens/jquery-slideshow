@@ -1,7 +1,7 @@
 /*!
- * Simplest jQuery Slideshow Plugin – http://github.com/mathiasbynens/Simplest-jQuery-Slideshow
- * Script by Jonathan Snook – http://snook.ca/archives/javascript/simplest-jquery-slideshow
- * Pluginified by Mathias Bynens – http://mathiasbynens.be/
+ * Simplest jQuery Slideshow Plugin v1.0
+ * @link http://github.com/mathiasbynens/Simplest-jQuery-Slideshow
+ * @author Mathias Bynens <http://mathiasbynens.be/>
  */
 ;(function($) {
  $.fn.slideshow = function(options) {
