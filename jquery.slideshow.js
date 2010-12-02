@@ -1,8 +1,8 @@
 /*!
-* Simplest jQuery Slideshow Plugin v1.0
-* @link http://github.com/mathiasbynens/Simplest-jQuery-Slideshow
-* @author Mathias Bynens <http://mathiasbynens.be/>
-*/
+ * Simplest jQuery Slideshow Plugin v1.0
+ * @link http://github.com/mathiasbynens/Simplest-jQuery-Slideshow
+ * @author Mathias Bynens <http://mathiasbynens.be/>
+ */
 ;(function($) {
 	$.fn.slideshow = function(options) {
 		options = $.extend({
