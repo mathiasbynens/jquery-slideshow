@@ -10,27 +10,42 @@ This plugin was based on [Jonathan Snook’s Simplest jQuery Slideshow script](h
 
 ### Simple
 
-    $('.slideshow').slideshow();
+```js
+$('.slideshow').slideshow();
+```
 
 ### Specifying parameters
 
-    $('.slideshow').slideshow({ timeout: 2000, speed: 300 });
+```js
+$('.slideshow').slideshow({
+  'timeout': 2000,
+  'speed': 300
+});
+```
 
 ### Multiple slideshows in one go
 
-    $('.slideshow, .other-slideshow').slideshow();
+```js
+$('.slideshow, .other-slideshow').slideshow();
+```
 
 ### CSS
 
 The plugin expects all images to be hidden. If you have a conditional `js` class on the `<body>` element, you can simply use the following CSS:
 
-    .js .slideshow li { display: none; }
+```css
+.js .slideshow li {
+  display: none;
+}
+```
 
 This is the fastest and preferred solution.
 
 But if you really want to, you could do this with jQuery instead:
 
-    $('.slideshow li').hide().parent().slideshow();
+```css
+$('.slideshow li').hide().parent().slideshow();
+```
 
 This functionality could easily be included in the plugin, but since it’s way better to just use CSS for this stuff I deliberately left it out.
 
@@ -44,17 +59,29 @@ To prevent users from seeing the last slide before the plugin is loaded, and to 
 
 The following line of CSS hides all slideshow elements through CSS – until the plugin makes them visible again, that is.
 
-    .slideshow li { display: none; }
+```css
+.slideshow li {
+  display: none;
+}
+```
 
 The first slideshow element, however, can still be visible:
 
-    .slideshow li:first-child { display: block; }
+```css
+.slideshow li:first-child {
+  display: block;
+}
+```
 
 Sadly, this won’t work on IE6, since this browser doesn’t support the `:first-child` pseudo-class. If you want to support IE6 as well, you could add a `first-child` class to the first slideshow element, and then use something like the following:
 
-    .slideshow li:first-child, .slideshow li.first-child { display: block; }
+```css
+.slideshow li:first-child, .slideshow li.first-child {
+  display: block;
+}
+```
 
-By using these two two lines of CSS, slideshow flickering is successfully avoided!
+By using these few lines of CSS, slideshow flickering is successfully avoided!
 
 ## Credits
 

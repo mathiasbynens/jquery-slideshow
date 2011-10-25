@@ -1,13 +1,9 @@
-/*!
- * Simplest jQuery Slideshow Plugin v1.0
- * @link http://github.com/mathiasbynens/Simplest-jQuery-Slideshow
- * @author Mathias Bynens <http://mathiasbynens.be/>
- */
+/*! http://mths.be/slideshow v1.0.0 by @mathias */
 ;(function($) {
 	$.fn.slideshow = function(options) {
 		options = $.extend({
-			timeout: 3000,
-			speed: 400 // 'normal'
+			'timeout': 3000,
+			'speed': 400 // 'normal'
 		}, options);
 		// We loop through the selected elements, in case the slideshow was called on more than one element e.g. `$('.foo, .bar').slideShow();`
 		return this.each(function() {
@@ -24,4 +20,4 @@
 			}, options.timeout);
 		});
 	};
-})(jQuery);
+}(jQuery));
